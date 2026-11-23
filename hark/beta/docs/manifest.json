@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "project": "ghostdreamer_pro",
+  "channel": "beta",
+  "branch": "main",
+  "version": "0.1.0-beta",
+  "base_commit": "db16f4a",
+  "last_verified_commit": "db16f4a",
+  "session": {
+    "current": "2026-11-22",
+    "status": "open",
+    "goals": [
+      {
+        "id": "G1",
+        "goal": "Confirm fork main as Pro line; add upstream remote",
+        "status": "open"
+      },
+      {
+        "id": "G2",
+        "goal": "Add hark/beta/docs alignment scaffold",
+        "status": "open"
+      }
+    ]
+  },
+  "milestones": [
+    {
+      "id": "v0.2.0-pro-alpha",
+      "branch": "main",
+      "status": "planned"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "title": "Shutdown route missing",
+      "status": "open",
+      "resolved_commit": null
+    },
+    {
+      "id": "F2",
+      "title": "Partial updates wipe settings",
+      "status": "open",
+      "resolved_commit": null
+    },
+    {
+      "id": "F3",
+      "title": "README truncated",
+      "status": "open",
+      "resolved_commit": null
+    },
+    {
+      "id": "F4",
+      "title": "Stream key exposure",
+      "status": "open",
+      "resolved_commit": null
+    },
+    {
+      "id": "F5",
+      "title": "No Origin/CSRF check",
+      "status": "open",
+      "resolved_commit": null
+    },
+    {
+      "id": "F6",
+      "title": "No LICENSE",
+      "status": "open",
+      "resolved_commit": null
+    }
+  ],
+  "upstream": "NeoMarkiss/ghostdreamer"
+}

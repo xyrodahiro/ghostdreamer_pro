@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ghostdreamer session alignment manifest",
+  "type": "object",
+  "required": ["schema_version", "project", "channel", "branch", "version", "last_verified_commit", "session"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "project": { "type": "string" },
+    "channel": { "enum": ["beta", "stable"] },
+    "branch": { "type": "string" },
+    "version": { "type": "string" },
+    "base_commit": { "type": "string" },
+    "last_verified_commit": { "type": "string" },
+    "session": {
+      "type": "object",
+      "required": ["current", "status", "goals"],
+      "properties": {
+        "current": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "status": { "enum": ["open", "in_review", "aligned", "deferred"] },
+        "goals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "goal", "status"],
+            "properties": {
+              "id": { "type": "string" },
+              "goal": { "type": "string" },
+              "status": { "enum": ["open", "done", "deferred"] }
+            }
+          }
+        }
+      }
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": { "status": { "enum": ["planned", "in_progress", "released"] } }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "status": { "enum": ["open", "fixed", "wontfix"] },
+          "resolved_commit": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}
