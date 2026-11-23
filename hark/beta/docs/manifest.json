@@ -5,28 +5,64 @@
   "branch": "main",
   "version": "0.1.0-beta",
   "base_commit": "db16f4a",
-  "last_verified_commit": "db16f4a",
+  "last_verified_commit": "cbebf7f",
   "session": {
     "current": "2026-11-22",
-    "status": "open",
+    "status": "aligned",
     "goals": [
       {
         "id": "G1",
         "goal": "Confirm fork main as Pro line; add upstream remote",
-        "status": "open"
+        "status": "done"
       },
       {
         "id": "G2",
         "goal": "Add hark/beta/docs alignment scaffold",
-        "status": "open"
+        "status": "done"
+      },
+      {
+        "id": "G3",
+        "goal": "Define Pro direction: stateless relay and roadmap",
+        "status": "done"
       }
     ]
   },
   "milestones": [
     {
+      "id": "v0.1.1-beta",
+      "branch": "main",
+      "status": "planned",
+      "scope": "Fix F1-F5, working CI (go-version-file: go.mod)"
+    },
+    {
       "id": "v0.2.0-pro-alpha",
       "branch": "main",
-      "status": "planned"
+      "status": "planned",
+      "scope": "Package layout (cmd/, internal/, web/), tests"
+    },
+    {
+      "id": "v0.3.0-pro-alpha",
+      "branch": "main",
+      "status": "planned",
+      "scope": "Playout of prepared files: H.264/AAC check, schedule, YouTube push"
+    },
+    {
+      "id": "v0.4.0-pro-beta",
+      "branch": "main",
+      "status": "planned",
+      "scope": "Single-user stateless relay: signed links, watch page, feature counters, /stats chart"
+    },
+    {
+      "id": "v0.5.0-pro-beta",
+      "branch": "main",
+      "status": "planned",
+      "scope": "Multi-owner opt-in: public-key file, external and singular content modes"
+    },
+    {
+      "id": "v0.6.0-pro-rc",
+      "branch": "main",
+      "status": "planned",
+      "scope": "Owner dashboards, link rotation, hardening, min-spec benchmarks"
     }
   ],
   "findings": [
@@ -65,7 +101,17 @@
       "title": "No LICENSE",
       "status": "open",
       "resolved_commit": null
+    },
+    {
+      "id": "F7",
+      "title": "CI template pins Go 1.20 vs go.mod 1.22",
+      "status": "open",
+      "resolved_commit": null
     }
   ],
-  "upstream": "NeoMarkiss/ghostdreamer"
+  "upstream": "NeoMarkiss/ghostdreamer",
+  "decisions": [
+    "0001-branch-model",
+    "0002-stateless-relay"
+  ]
 }
